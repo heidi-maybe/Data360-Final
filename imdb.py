@@ -3,9 +3,6 @@ import pandas as pd
 import numpy as np
 
 import matplotlib.pyplot as plt
-import plotly.express as px
-import plotly.graph_objects as go
-
 import re 
 
 st.set_page_config(page_title="IMDb 100", layout="wide")
