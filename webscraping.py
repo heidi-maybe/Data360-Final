@@ -1,3 +1,5 @@
+# same code as the jupyter notebook just in a python file
+
 import requests
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -34,7 +36,7 @@ for movie_element in movie_elements:
     genre = []
     title_element = movie_element.find("h3").text.strip()
     
-    descr_elements = movie_element.find_all("span", class_="sc-4b408797-8 iurwGb cli-title-metadata-item")
+    descr_elements = movie_element.find_all("span", class_="sc-4b408797-8 iurwGb cli-title-metadata-item") # If the release, time, and movie elements are returning none check the class name. It could have updated on the website.
     star_element = movie_element.find("span", class_="ipc-rating-star--rating")
     star_element = star_element.text.strip() if star_element else None
     link_element = movie_element.find("a")["href"]
